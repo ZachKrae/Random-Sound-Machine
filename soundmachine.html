@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sound Collage Machine</title>
+        <script src="./soundmanagerv297a-20170601/script/soundmanager2.js"></script>
+        <script src="soundcommands.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+        <div class="bg-image"></div>
+        <div class="title-grid">
+            <img class="title-img" src="./images/sound.png">
+            <img class="icon" src="./images/placeholder.png">
+            <img class="title-img" src="./images/machine.png">
+        </div>
+
+        <div class="iconRow">
+            <img class="icon" src="./images/placeholder.png" alt="drones" id="drone" onclick="playDrone()">
+            <img class="icon" src="./images/placeholder.png" alt="piano" onclick="playPiano()">
+            <img class="icon" src="./images/placeholder.png" alt="ambience" onclick="playAmbience()">
+            <img class="icon" src="./images/placeholder.png" alt="speech" onclick="playSpeech()">
+            <img class="icon" src="./images/placeholder.png" alt="drums" onclick="playDrums()">
+        </div>
+        <div class="stopButton">
+            <img class="icon" src="./images/stopbutton.jpg" alt="stop" onclick="stop()">
+            <img class="icon" src="./images/random.png" alt="random" onclick="playRandom()"> 
+        </div>
+    </body>
+</html>

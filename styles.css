@@ -1,0 +1,37 @@
+body {
+  background-image: url("./images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+}
+
+.icon {
+  width: 10vw;
+  padding: 10px;
+  position: relative;
+  border-radius: 10%;
+}
+
+.icon:hover {
+  opacity: 50%;
+}
+
+.iconRow {
+  margin: auto;
+  text-align: center;
+}
+
+.stopButton {
+  text-align: center;
+}
+
+.title-grid {
+  grid-template-columns: 40vw 19vw 40vw;
+  height: 25vh;
+}
+
+.title-img {
+  height: 20vh;
+}
