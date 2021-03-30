@@ -20,7 +20,16 @@ body {
 
 .iconRow {
   margin: auto;
+  padding: 10px;
   text-align: center;
+  height: 25vh;
+}
+
+.logo {
+  width: 10vw;
+  padding: 10px;
+  position: relative;
+  border-radius: 10%;
 }
 
 .stopButton {
@@ -33,5 +42,5 @@ body {
 }
 
 .title-img {
-  height: 20vh;
+  height: 25vh;
 }

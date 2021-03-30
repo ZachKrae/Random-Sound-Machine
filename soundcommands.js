@@ -46,7 +46,6 @@ soundManager.onready(function() {
         id: 'ambience3',
         url: './ambience/463903__burghrecords__birds-in-spring-scotland.wav',
     });
-
     soundManager.createSound({
         id: 'ambience4',
         url: './ambience/451559__kyles__crickets-night-parking-lot-by-highway-distant-traffic.flac',
@@ -100,12 +99,16 @@ var all = [drones, pianos, ambience, speech, drums]
 
 function playDrone() {
     var rndNum = Math.floor(Math.random() * 3);
+    let randSound = soundManager.getSoundById(drones[rndNum])
     soundManager.play(drones[rndNum]);
+    console.log(randSound.url);
 }
 
 function playPiano() {
     var rndNum = Math.floor(Math.random() * 4);
+    let randSound = soundManager.getSoundById(pianos[rndNum])
     soundManager.play(pianos[rndNum]);
+    console.log(randSound.url);
 }
 
 function playAmbience() {
