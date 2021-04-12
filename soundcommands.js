@@ -18,6 +18,12 @@ soundManager.onready(function() {
         loops: 10,
     });  
     soundManager.createSound({
+        id: 'drone4',
+        url: './drones/60cyclehum.wav',
+        volume: 75,
+        loops: 10,
+    });  
+    soundManager.createSound({
         id: 'piano1',
         url: './pianos/216669__patricklieberkind__distant-sad-piano.mp3',
         loops: 2
@@ -40,7 +46,8 @@ soundManager.onready(function() {
     });  
     soundManager.createSound({
         id: 'ambience2',
-        url: './ambience/103684__chimerical__quiet-park.mp3',
+        url: './ambience/chimerical__quiet-park-clip-1.wav',
+        loops: 10
     });
     soundManager.createSound({
         id: 'ambience3',
@@ -52,56 +59,22 @@ soundManager.onready(function() {
         volume: 10,
     });
     soundManager.createSound({
-        id: 'speech1',
-        url: './speech/169760__unfa__biblia-tysiaclecia-dzieje-apostolskie-7.mp3',
-    });  
-    soundManager.createSound({
-        id: 'speech2',
-        url: './speech/163627__shrimppizza__reading-from-descartes-discourse-on-method.mp3',
-    });
-    soundManager.createSound({
-        id: 'speech3',
-        url: './speech/13623__incarnadine__david-c-scott-a-morning-walk.mp3'
-    });
-    soundManager.createSound({
-        id: 'speech4',
-        url: './speech/406044__jesusonoro__colombian-boy-poetry.wav'
-    });
-    soundManager.createSound({
-        id: 'drumBeat1',
-        url: './drums/252453__scydan__jazzy-beat-75bpm.wav',
-        loops: 4
-    });
-    soundManager.createSound({
-        id: 'drumBeat2',
-        url: './drums/400572__adnova__nothing-of-value.wav',
-        volume: 60,
-        loops: 4
-    });
-    soundManager.createSound({
-        id: 'drumBeat3',
-        url: './drums/235844__jamesabdulrahman__bossa-rover.flac',
-        loops: 4
-    });
-    soundManager.createSound ({
-        id: 'drumBeat4',
-        url: './drums/244337__insidebeat__palo-alto.wav',
-        loops: 4
+        id: 'ambience5',
+        url: './ambience/chimerical__quiet-park-clip-2.wav',
+        loops: 10
     });
 });
 
-var drones = ["drone1", "drone2", "drone3", "drone1"]
+var drones = ["drone1", "drone2", "drone3", "drone4"]
 var pianos = ["piano1", "piano2", "piano3", "piano4"]
-var ambience = ["ambience1", "ambience2", "ambience3", "ambience4"]
-var speech = ["speech1", "speech2", "speech3", "speech4"]
-var drums = ["drumBeat1", "drumBeat2", "drumBeat3", "drumBeat4"]
+var ambience = ["ambience1", "ambience2", "ambience3", "ambience4", "ambience5"]
 var all = [drones, pianos, ambience, speech, drums]
 
 function playDrone() {
-    var rndNum = Math.floor(Math.random() * 3);
+    var rndNum = Math.floor(Math.random() * 4);
     let randSound = soundManager.getSoundById(drones[rndNum])
     soundManager.play(drones[rndNum]);
-    console.log(randSound.url);
+    console.log("I am playing " + randSound.url + " right now.");
 }
 
 function playPiano() {
@@ -114,16 +87,6 @@ function playPiano() {
 function playAmbience() {
     var rndNum = Math.floor(Math.random() * 4);
     soundManager.play(ambience[rndNum]);
-}
-
-function playSpeech() {
-    var rndNum = Math.floor(Math.random() * 4);
-    soundManager.play(speech[rndNum]);
-}
-
-function playDrums() {
-    var rndNum = Math.floor(Math.random() * 4);
-    soundManager.play(drums[rndNum]);
 }
 
 function stop() {
